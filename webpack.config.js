@@ -1,5 +1,6 @@
 // 引入path模块
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'production', // 模式 开发、发布等
   // 入口
@@ -20,5 +21,11 @@ module.exports = {
         loader: 'awesome-typescript-loader' // 使用的loader
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'muzlin.ui',
+      template: 'index.html'
+    })
+  ],
 }

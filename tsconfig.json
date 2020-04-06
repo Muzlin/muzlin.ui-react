@@ -8,6 +8,7 @@
       "es6",
       "dom"
     ],
+    "outDir": "dist", // 打包的输出目录
     "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",

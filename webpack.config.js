@@ -7,6 +7,9 @@ module.exports = {
   entry: {
     index: './lib/index.tsx', // 入口的名字 index 值为具体路径
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
   // 输出
   output: {
     path: path.resolve(__dirname, 'dist/lib'), // 输出路径 因为操作系统不一致 所有需要path来处理

@@ -2,7 +2,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-  mode: 'production', // 模式 开发、发布等
+  // mode: 'development', // 模式 开发、发布等
   // 入口
   entry: {
     index: './lib/index.tsx', // 入口的名字 index 值为具体路径
@@ -25,10 +25,25 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'muzlin.ui',
-      template: 'index.html'
-    })
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     title: 'muzlin.ui',
+  //     template: 'index.html'
+  //   })
+  // ],
+  // // 排除外部库 不打包
+  // externals: {
+  //   react: {
+  //     commonjs: 'react',
+  //     commonjs2: 'rect',
+  //     amd: 'react',
+  //     root: 'React'
+  //   },
+  //   'react-dom': {
+  //     commonjs: 'react-dom',
+  //     commonjs2: 'rect-dom',
+  //     amd: 'react-dom',
+  //     root: 'React-dom'
+  //   }
+  // }
 }

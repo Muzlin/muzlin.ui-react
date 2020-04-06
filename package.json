@@ -1,12 +1,13 @@
 {
   "name": "react-muzlin.UI",
+  "main": "dist/lib/index.js",
+  "type": "dist/lib/index",
   "version": "1.0.0",
   "description": "基于react 的UI组件库",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "test": "cross-env NODE_ENV=test echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
     "awesome-typescript-loader": "^5.2.1",
+    "cross-env": "^7.0.2",
     "html-webpack-plugin": "^4.0.4",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
